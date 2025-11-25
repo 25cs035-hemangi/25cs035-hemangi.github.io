@@ -1,121 +1,114 @@
-<!-- FULL PORTFOLIO WEBSITE CODE PACKAGE -->
-<!-- index.html -->
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhruvi Mokani — Portfolio</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6b2;--accent:#06b6d4}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;line-height:1.5;color:#e6eef6;background:linear-gradient(180deg,#071022 0%,#071a2a 100%);padding-bottom:4rem}
+    header{background:transparent;padding:1.25rem 1rem;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:0 auto}
+    a.logo{color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem}
+    nav a{color:var(--muted);text-decoration:none;margin-left:1rem}
+    .container{max-width:1100px;margin:1rem auto;padding:1rem}
+    .hero{display:flex;gap:2rem;align-items:center;padding:1.25rem;background:rgba(255,255,255,0.02);border-radius:12px}
+    .avatar{width:140px;height:140px;border-radius:50%;overflow:hidden;border:4px solid rgba(255,255,255,0.06);flex-shrink:0}
+    .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+    .hero h1{margin:0;color:#fff;font-size:1.6rem}
+    .hero p{margin:0.35rem 0;color:var(--muted)}
+    .buttons{margin-top:0.6rem}
+    .btn{display:inline-block;padding:0.5rem 0.9rem;border-radius:8px;text-decoration:none;font-weight:600}
+    .btn-primary{background:var(--accent);color:#072024}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;margin-top:1rem}
+    .card{grid-column:span 8;background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px}
+    .side{grid-column:span 4;background:rgba(255,255,255,0.02);padding:1rem;border-radius:10px}
+    h2{color:#dff6fb;margin-top:0}
+    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:0.5rem}
+    ul.skills li{background:rgba(255,255,255,0.03);padding:0.45rem 0.6rem;border-radius:999px;font-size:0.9rem;color:var(--muted)}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0.9rem}
+    .project{background:rgba(255,255,255,0.02);padding:0.9rem;border-radius:8px}
+    .project h3{margin:0 0 0.35rem 0}
+    footer{max-width:1100px;margin:1.5rem auto;text-align:center;color:var(--muted)}
+    @media (max-width:800px){.hero{flex-direction:column;align-items:flex-start}.grid{display:block}.card,.side{grid-column:auto}.avatar{width:120px;height:120px}}
+  </style>
 </head>
 <body>
+  <header>
+    <a class="logo" href="#">Dhruvi Mokani</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <main class="container">
+    <section class="hero" id="about">
+      <div class="avatar">
+        <!-- Add your profile image at assets/profile.jpg in the repo -->
+        <img src="assets/profile.jpg" alt="Dhruvi Mokani">
+      </div>
+      <div>
+        <h1>Hi — I’m Dhruvi Mokani</h1>
+        <p>I am a first year CSE student pursuing Computer Science and Engineering from CSPIT, CHARUSAT.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn" href="#contact" style="margin-left:0.5rem;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)">Contact Me</a>
+        </div>
+      </div>
+    </section><div class="grid">
+  <section class="card" id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio (this website) built using HTML and CSS, designed to showcase projects and skills. Deployed on GitHub Pages.</p>
+        <p style="margin:0;font-size:0.85rem;color:var(--muted)">Tech: HTML, CSS, GitHub Pages</p>
+      </div>
 
-<header>
-  <h1>hemangi korat</h1>
-  <p>Web Developer | Student | Programmer</p>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="skills.html">Skills & Projects</a>
-    <a href="certificates.html">Certificates</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+      <div class="project">
+        <h3>Student Management System</h3>
+        <p>Mini console-based project in C for managing student records — add, view, and search student details.</p>
+        <p style="margin:0;font-size:0.85rem;color:var(--muted)">Tech: C</p>
+      </div>
 
-<section class="home">
-  <img src="" class="profile">
-  <h2>About Me</h2>
-  <p>I am a passionate student interested in programming and technology.
-  I love building projects and learning new skills.</p>
-</section>
+      <div class="project">
+        <h3>Coming Soon</h3>
+        <p>Placeholder for future projects — add descriptions or links and I’ll update this section.</p>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  © 2025 hemangi korat
-</footer>
+  <aside class="side">
+    <h2 id="skills">Skills</h2>
+    <ul class="skills">
+      <li>C</li>
+      <li>C++</li>
+      <li>Python</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Git / GitHub</li>
+      <li>Problem Solving</li>
+    </ul>
 
-</body>
-</html>
+    <hr style="margin:1rem 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
 
-<!-- skills.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="style.css">
-  <title>Skills & Projects</title>
-</head>
-<body>
-<header>
-  <h1>Skills & Projects</h1>
-</header>
+    <h2>Contact</h2>
+    <p style="margin:0">Email: <a href="mailto:dhruvimokani08@gmail.com" style="color:var(--accent);text-decoration:none">dhruvimokani08@gmail.com</a></p>
 
-<section class="content">
-<h2>Skills</h2>
-<ul>
-  <li>HTML / CSS</li>
-  <li>JavaScript</li>
-  <li>Python / C</li>
-  <li>Git / GitHub</li>
-</ul>
+    <div style="margin-top:1rem;font-size:0.9rem;color:var(--muted)">
+      <p style="margin:0">Resume: <em>(add resume.pdf to the repo root and replace this)</em></p>
+    </div>
+  </aside>
+</div>
 
-<h2>Projects</h2>
-<ul>
-  <li><b>LED Control using Arduino</b><br>Project controlling LED using input and timing.</li>
-  <li><b>Personal Portfolio Website</b><br>This website built using GitHub Pages.</li>
-</ul>
-</section>
-
-<footer>© 2025 hemangi korat</footer>
-</body>
-</html>
-
-<!-- certificates.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="style.css">
-  <title>Certificates</title>
-</head>
-<body>
-<header>
-  <h1>Certificates</h1>
-</header>
-
-<section class="content">
-<p>
-  <a href="https://coursera.org/verify/XXXXX" target="_blank">Coursera Certificate</a>
-</p>
-
-<p>
-  <iframe src="https://drive.google.com/file/d/FILE_ID/preview" width="640" height="480"></iframe>
-</p>
-</section>
-
-<footer>© 2025 hemangi korat</footer>
-</body>
-</html>
-
-<!-- contact.html -->
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="style.css">
-  <title>Contact</title>
-</head>
-<body>
-<header>
-  <h1>Contact Me</h1>
-</header>
-
-<section class="content">
-<p>Email: <a href="mailto:hemangikorat196@gmail.com">hemangikorat196@gmail.com</a></p>
-
-<h3>Send a Message</h3>
-<iframe src="hemangikorat196@gmail.com" width="90%" height="600"></iframe>
-
-<p><a href="https://www.hemangi korat.com">LinkedIn Profile</a></p>
-</section>
-
-
-
-<footer>© 2025 Your Name</footer>
-</body>
+  </main>  <footer>
+    <p>© 2025 Dhruvi Mokani — Built with ❤️</p>
+  </footer>  <!--
+  NOTES TO DEPLOY:
+  1) Create a GitHub repo (e.g., dhruvimokani.github.io OR any repo and use GitHub Pages settings).
+  2) Add this HTML file as index.html at the repo root.
+  3) Add your profile image at /assets/profile.jpg (or edit the img src to your filename).
+  4) Commit and push. In repo Settings -> Pages, select branch (main) and root -> Save.
+  5) Your site will be live at https://<your-username>.github.io/<repo-name> (or the username.github.io if repo named that).
+  --></body>
 </html>
